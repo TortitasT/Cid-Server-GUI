@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
-    <link href="./styles.css" rel="stylesheet">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+	<head>
+		<meta charset="UTF-8" />
+		<!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"
+		/>
+		<link href="./styles.css" rel="stylesheet" />
+		<link href="./assets/fa/css/all.css" rel="stylesheet" />
+		<title>Panel</title>
+	</head>
+	<body>
+		<main>
+			<h1>Cid Server GUI</h1>
+			<p>Server running on public address: <span id="publicAddress"></span></p>
+			<p>Server running on local addresses: <span id="localAddress"></span></p>
+			<h3>
+				Players (<span id="numPlayers"></span>/<span id="maxPlayers"></span>):
+			</h3>
 
-    <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
-  </body>
+			<table>
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Name</th>
+						<th>IP</th>
+						<th>Ping</th>
+					</tr>
+				</thead>
+				<tbody id="players"></tbody>
+			</table>
+			<button id="btnExit"><i class="fa-solid fa-door-open"></i></button>
+		</main>
+
+		<script src="./renderer.js"></script>
+	</body>
 </html>

@@ -1,3 +1,76 @@
 /* styles.css */
 
 /* Add styles here to customize the appearance of your app */
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+html {
+	scrollbar-face-color: #646464;
+	scrollbar-base-color: #646464;
+	scrollbar-3dlight-color: #646464;
+	scrollbar-highlight-color: #646464;
+	scrollbar-track-color: #000;
+	scrollbar-arrow-color: #000;
+	scrollbar-shadow-color: #646464;
+	scrollbar-dark-shadow-color: #646464;
+}
+::-webkit-scrollbar { width: 8px; height: 3px;}
+::-webkit-scrollbar-button {  background-color: #666; }
+::-webkit-scrollbar-track {  background-color: #1e1e1e;}
+::-webkit-scrollbar-track-piece { background-color: #1e1e1e;}
+::-webkit-scrollbar-thumb { height: 50px; background-color: #666; border-radius: 3px;}
+::-webkit-scrollbar-corner { background-color: #646464;}}
+::-webkit-resizer { background-color: #666;}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+
+	background-color: #121212;
+	color: white;
+}
+
+p,
+h2,
+h3,
+table {
+	margin-top: 15px;
+}
+
+table {
+	background-color: #1e1e1e;
+	border-spacing: 15px;
+
+	display: block;
+	height: 200px;
+	overflow-y: scroll;
+
+	box-shadow:
+		/* offset-x | offset-y | blur-radius | spread-radius | color */ 0px
+			16px 24px 2px hsla(0, 0%, 0%, 0.14),
+		0px 6px 30px 5px hsla(0, 0%, 0%, 0.12),
+		0px 8px 10px -5px hsla(0, 0%, 0%, 0.2);
+}
+
+button {
+	background-color: #03dac6;
+	padding: 15px 25px;
+	margin: 15px 0;
+	border: none;
+	border-radius: 5px;
+
+	text-transform: uppercase;
+	font-weight: bold;
+
+	box-shadow:
+		/* offset-x | offset-y | blur-radius | spread-radius | color */ 0px
+			16px 24px 2px hsla(0, 0%, 0%, 0.14),
+		0px 6px 30px 5px hsla(0, 0%, 0%, 0.12),
+		0px 8px 10px -5px hsla(0, 0%, 0%, 0.2);
+}
